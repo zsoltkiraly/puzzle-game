@@ -1,0 +1,196 @@
+.elephant {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  .background:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/savannah.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @include background-size(cover);
+    @include opacity(.85);
+  }
+}
+
+.elephant-negative {
+  position: absolute;
+  background-image: url(../images/elephant/negative.png);
+  width: 506px;
+  height: 438px;
+  left: 650px;
+  top: 500px;
+  z-index: 1;
+  background-repeat: no-repeat;
+
+  @include opacity(.8);
+}
+
+.puzzle-area {
+  &.elephant1 {
+    width: 316px;
+    height: 277px;
+    top: 525px;
+    left: 857px;
+  }
+
+  &.elephant2 {
+    width: 294px;
+    height: 207px;
+    top: 559px;
+    left: 743px;
+  }
+
+  &.elephant3 {
+    width: 48px;
+    height: 59px;
+    top: 500px;
+    left: 650px;
+  }
+
+  &.elephant4 {
+    width: 64px;
+    height: 70px;
+    top: 708px;
+    left: 719px;
+  }
+
+  &.elephant5 {
+    width: 131px;
+    height: 135px;
+    top: 783px;
+    left: 837px;
+  }
+
+  &.elephant6 {
+    width: 172px;
+    height: 203px;
+    top: 743px;
+    left: 940px;
+  }
+
+  &.elephant7 {
+    width: 96px;
+    height: 62px;
+    top: 601px;
+    left: 1077px;
+  }
+}
+
+.puzzle-element {
+  &.elephant1 {
+    width: 234px;
+    height: 270px;
+    top: 420px;
+    left: 1420px;
+
+    &:after { background-image: url(../images/elephant/body.png); }
+  }
+
+  &.elephant2 {
+    width: 180px;
+    height: 324px;
+    top: 570px;
+    left: 220px;
+
+    &:after { background-image: url(../images/elephant/head.png); }
+  }
+
+  &.elephant3 {
+    width: 130px;
+    height: 230px;
+    top: 100px;
+    left: 700px;
+
+    &:after { background-image: url(../images/elephant/ear-left.png); }
+  }
+
+  &.elephant4 {
+    width: 39px;
+    height: 41px;
+    top: 390px;
+    left: 1170px;
+
+    &:after { background-image: url(../images/elephant/horn.png); }
+  }
+
+  &.elephant5{
+    width: 149px;
+    height: 110px;
+    top: 200px;
+    left: 1300px;
+
+    &:after { background-image: url(../images/elephant/leg-front.png); }
+  }
+
+  &.elephant6 {
+    width: 161px;
+    height: 123px;
+    top: 120px;
+    left: 130px;
+
+    &:after { background-image: url(../images/elephant/leg-back.png); }
+  }
+
+  &.elephant7 {
+    width: 79px;
+    height: 108px;
+    top: 340px;
+    left: 400px;
+
+    &:after { background-image: url(../images/elephant/tail.png); }
+  }
+
+  &.start {
+    &.elephant1 {
+      top: 525px;
+      left: 857px;
+    }
+
+    &.elephant2 {
+      top: 559px;
+      left: 743px;
+    }
+
+    &.elephant3 {
+      top: 500px;
+      left: 650px;
+    }
+
+    &.elephant4 {
+      top: 708px;
+      left: 719px;
+    }
+
+    &.elephant5 {
+      top: 783px;
+      left: 837px;
+    }
+
+    &.elephant6 {
+      top: 743px;
+      left: 940px;
+    }
+
+    &.elephant7 {
+      top: 601px;
+      left: 1077px;
+    }
+    &.elephant1,
+    &.elephant2,
+    &.elephant3,
+    &.elephant4,
+    &.elephant5,
+    &.elephant6,
+    &.elephant7 {
+      &:after {
+        @include rotate(0deg);
+      }
+    }
+  }
+}

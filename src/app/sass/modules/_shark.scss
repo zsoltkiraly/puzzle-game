@@ -1,0 +1,175 @@
+.shark {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	.background:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/under_the_sea.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@include background-size(cover);
+		@include opacity(.85);
+	}
+}
+
+.shark-negative {
+	position: absolute;
+	background-image: url(../images/shark/negative.png);
+	width: 503px;
+	height: 447px;
+	left: 700px;
+	top: 280px;
+	z-index: 1;
+	background-repeat: no-repeat;
+
+	@include opacity(.8);
+}
+
+.puzzle-area {
+	&.shark1 {
+		width: 312px;
+		height: 276px;
+		top: 479px;
+		left: 720px;
+	}
+
+	&.shark2 {
+		width: 289px;
+		height: 205px;
+		top: 463px;
+		left: 910px;
+	}
+
+	&.shark3 {
+		width: 44px;
+		height: 56px;
+		top: 332px;
+		left: 700px;
+	}
+
+	&.shark4 {
+		width: 59px;
+		height: 66px;
+		top: 280px;
+		left: 910px;
+	}
+
+	&.shark5 {
+		width: 130px;
+		height: 132px;
+		top: 640px;
+		left: 722px;
+	}
+
+	&.shark6 {
+		width: 171px;
+		height: 199px;
+		top: 634px;
+		left: 1087px;
+	}
+}
+
+.puzzle-element {
+	&.shark1 {
+		width: 230px;
+		height: 208px;
+		top: 320px;
+		left: 1220px;
+
+		&:after { background-image: url(../images/shark/body.png); }
+	}
+
+	&.shark2 {
+		width: 272px;
+		height: 226px;
+		top: 700px;
+		left: 220px;
+
+		&:after { background-image: url(../images/shark/head.png); }
+	}
+
+	&.shark3 {
+		width: 143px;
+		height: 184px;
+		top: 500px;
+		left: 100px;
+
+		&:after { background-image: url(../images/shark/flipper-back.png); }
+	}
+
+	&.shark4 {
+		width: 73px;
+		height: 202px;
+		top: 700px;
+		left: 1580px;
+
+		&:after { background-image: url(../images/shark/flipper-top.png); }
+	}
+
+	&.shark5 {
+		width: 128px;
+		height: 87px;
+		top: 400px;
+		left: 1700px;
+
+		&:after { background-image: url(../images/shark/flipper-front-left.png); }
+	}
+
+	&.shark6 {
+		width: 116px;
+		height: 74px;
+		top: 390px;
+		left: 320px;
+
+		&:after { background-image: url(../images/shark/flipper-front-right.png); }
+	}
+
+	&.start {
+		&.shark1 {
+			top: 479px;
+			left: 720px;
+		}
+
+		&.shark2 {
+			top: 463px;
+			left: 910px;
+		}
+
+		&.shark3 {
+			top: 332px;
+			left: 700px;
+		}
+
+		&.shark4 {
+			top: 280px;
+			left: 910px;
+		}
+
+		&.shark5 {
+			top: 640px;
+			left: 722px;
+		}
+
+		&.shark6 {
+			top: 634px;
+			left: 1087px;
+		}
+
+		&.shark1,
+		&.shark2,
+		&.shark3,
+		&.shark4,
+		&.shark5,
+		&.shark6 {
+			&:after {
+				@include rotate(0deg);
+			}
+		}
+	}
+}

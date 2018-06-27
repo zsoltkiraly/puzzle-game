@@ -1,0 +1,218 @@
+.bear {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	.background:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/forest.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@include background-size(cover);
+		@include opacity(.85);
+	}
+}
+
+.bear-negative {
+	position: absolute;
+	background-image: url(../images/bear/negative.png);
+	width: 522px;
+	height: 533px;
+	left: 680px;
+	top: 400px;
+	z-index: 1;
+	
+	@include opacity(.85);
+}
+
+.puzzle-area {
+	&.bear1 {
+		width: 316px;
+		height: 277px;
+		top: 575px;
+		left: 780px;
+	}
+	&.bear2 {
+		width: 294px;
+		height: 207px;
+		top: 421px;
+		left: 756px;
+	}
+
+	&.bear3 {
+		width: 48px;
+		height: 59px;
+		top: 400px;
+		left: 814px;
+	}
+
+	&.bear4 {
+		width: 64px;
+		height: 70px;
+		top: 430px;
+		left: 985px;
+	}
+
+	&.bear5 {
+		width: 131px;
+		height: 135px;
+		top: 718px;
+		left: 700px;
+	}
+
+	&.bear6 {
+		width: 172px;
+		height: 203px;
+		top: 692px;
+		left: 1030px;
+	}
+
+	&.bear7 {
+		width: 96px;
+		height: 62px;
+		top: 826px;
+		left: 789px;
+	}
+
+	&.bear8 {
+		width: 103px;
+		height: 55px;
+		top: 841px;
+		left: 884px;
+	}
+}
+
+.puzzle-element {
+	&.bear1 {
+		width: 316px;
+		height: 277px;
+		top: 320px;
+		left: 1220px;
+
+		&:after { background-image: url(../images/bear/body.png); }
+	}
+
+	&.bear2 {
+		width: 294px;
+		height: 207px;
+		top: 700px;
+		left: 220px;
+
+		&:after { background-image: url(../images/bear/head.png); }
+	}
+
+	&.bear3 {
+		width: 48px;
+		height: 59px;
+		top: 100px;
+		left: 700px;
+
+		&:after { background-image: url(../images/bear/ear-left.png); }
+	}
+
+	&.bear4 {
+		width: 64px;
+		height: 70px;
+		top: 700px;
+		left: 1580px;
+
+		&:after { background-image: url(../images/bear/ear-right.png); }
+	}
+
+	&.bear5 {
+		width: 131px;
+		height: 135px;
+		top: 400px;
+		left: 1700px;
+
+		&:after { background-image: url(../images/bear/leg-left-back.png); }
+	}
+
+	&.bear6 {
+		width: 172px;
+		height: 203px;
+		top: 390px;
+		left: 320px;
+
+		&:after { background-image: url(../images/bear/leg-right-back.png); }
+	}
+
+	&.bear7{
+		width: 96px;
+		height: 62px;
+		top: 180px;
+		left: 1000px;
+
+		&:after { background-image: url(../images/bear/leg-left-front.png); }
+	}
+
+	&.bear8 {
+		width: 103px;
+		height: 55px;
+		top: 120px;
+		left: 130px;
+
+		&:after { background-image: url(../images/bear/leg-right-front.png); }
+	}
+
+	&.start {
+		&.bear1 {
+			top: 575px;
+			left: 780px;
+		}
+
+		&.bear2 {
+			top: 421px;
+			left: 756px;
+		}
+
+		&.bear3 {
+			top: 400px;
+			left: 814px;
+		}
+
+		&.bear4 {
+			top: 430px;
+			left: 985px;
+		}
+
+		&.bear5 {
+			top: 718px;
+			left: 700px;
+		}
+
+		&.bear6 {
+			top: 692px;
+			left: 1030px;
+		}
+
+		&.bear7 {
+			top: 826px;
+			left: 789px;
+		}
+
+		&.bear8 {
+			top: 841px;
+			left: 884px;
+		}
+
+		&.bear1,
+		&.bear2,
+		&.bear3,
+		&.bear4,
+		&.bear5,
+		&.bear6,
+		&.bear7,
+		&.bear8 {
+
+			&:after {
+				@include rotate(0deg);
+			}
+		}
+	}
+}

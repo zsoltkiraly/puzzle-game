@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <title>puzzle game v1.0.4 by Zsolt Kiraly</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+
+	<section class="select-game-area loading">
+		<div class="select-background" style="background-image: url(images/forest.jpg);"></div>
+		<div class="select-game" data-class="bear-game-area"><span>Select puzzle</span></div>
+		<div class="info">
+
+			<div class="text">Mouse</div>
+
+			<div class="mouse">
+				<div class="button"></div>
+				<div class="point"></div>
+			</div>
+
+		</div>
+		<div class="restart">Restart</div>
+		<div class="select rotate1" rotate-id="1"></div>
+	</section>
+
+	<section class="bear-game-area hide">
+		<div class="bear">
+			<div class="background disabled">
+
+				<div class="back">&#60;</div>
+				<div class="coin"></div>
+				<div class="points">0</div>
+
+				<div class="bear-negative"></div>
+
+				<div class="puzzle-element bear1 rotate2 start transition" rotate-id="2" puzzle-id="1"></div>
+				<div class="puzzle-element bear2 rotate3 start transition" rotate-id="3" puzzle-id="2"></div>
+				<div class="puzzle-element bear3 rotate4 start transition" rotate-id="4" puzzle-id="3"></div>
+				<div class="puzzle-element bear4 rotate4 start transition" rotate-id="4" puzzle-id="4"></div>
+				<div class="puzzle-element bear5 rotate3 start transition" rotate-id="3" puzzle-id="5"></div>
+				<div class="puzzle-element bear6 rotate2 start transition" rotate-id="2" puzzle-id="6"></div>
+				<div class="puzzle-element bear7 rotate2 start transition" rotate-id="2" puzzle-id="7"></div>
+				<div class="puzzle-element bear8 rotate3 start transition" rotate-id="3" puzzle-id="8"></div>
+
+				<div class="puzzle-area bear1" area-id="1"></div>
+				<div class="puzzle-area bear2" area-id="2"></div>
+				<div class="puzzle-area bear3" area-id="3"></div>
+				<div class="puzzle-area bear4" area-id="4"></div>
+				<div class="puzzle-area bear5" area-id="5"></div>
+				<div class="puzzle-area bear6" area-id="6"></div>
+				<div class="puzzle-area bear7" area-id="7"></div>
+				<div class="puzzle-area bear8" area-id="8"></div>
+
+				<div class="space-info">
+					<div class="rotate">&#10558;</div>
+					<div class="space"><span>SPACE</span></div>
+				</div>
+
+				<div id="leaves">
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="elephant-game-area hide">
+		<div class="elephant">
+			<div class="background disabled">
+
+				<div class="back">&#60;</div>	
+				<div class="coin"></div>
+				<div class="points">0</div>
+
+				<div class="elephant-negative"></div>
+
+				<div class="puzzle-element elephant1 rotate2 start transition" rotate-id="2" puzzle-id="1"></div>
+				<div class="puzzle-element elephant2 rotate3 start transition" rotate-id="3" puzzle-id="2"></div>
+				<div class="puzzle-element elephant3 rotate4 start transition" rotate-id="4" puzzle-id="3"></div>
+				<div class="puzzle-element elephant4 rotate3 start transition" rotate-id="3" puzzle-id="4"></div>
+				<div class="puzzle-element elephant5 rotate4 start transition" rotate-id="4" puzzle-id="5"></div>
+				<div class="puzzle-element elephant6 rotate2 start transition" rotate-id="2" puzzle-id="6"></div>
+				<div class="puzzle-element elephant7 rotate3 start transition" rotate-id="3" puzzle-id="7"></div>
+
+				<div class="puzzle-area elephant1" area-id="1"></div>
+				<div class="puzzle-area elephant2" area-id="2"></div>
+				<div class="puzzle-area elephant3" area-id="3"></div>
+				<div class="puzzle-area elephant4" area-id="4"></div>
+				<div class="puzzle-area elephant5" area-id="5"></div>
+				<div class="puzzle-area elephant6" area-id="6"></div>
+				<div class="puzzle-area elephant7" area-id="7"></div>
+
+				<div class="space-info">
+					<div class="rotate">&#10558;</div>
+					<div class="space"><span>SPACE</span></div>
+				</div>
+
+				<div id="bird-content">
+					<div id="bird">
+						<div id="body2"></div>
+						<div id="body1"></div>
+						<div id="wing-l"></div>  
+						<div id="wing-r"></div>  
+					</div>
+					<div id="shadow"></div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section class="shark-game-area hide">
+		<div class="shark">
+
+			<div class="background disabled">
+
+				<div class="back">&#60;</div>
+				<div class="coin"></div>
+				<div class="points">0</div>
+
+				<div class="shark-negative"></div>
+
+				<div class="puzzle-element shark1 rotate4 start transition" rotate-id="4" puzzle-id="1"></div>
+				<div class="puzzle-element shark2 rotate3 start transition" rotate-id="3" puzzle-id="2"></div>
+				<div class="puzzle-element shark3 rotate1 start transition" rotate-id="1" puzzle-id="3"></div>
+				<div class="puzzle-element shark4 rotate4 start transition" rotate-id="4" puzzle-id="4"></div>
+				<div class="puzzle-element shark5 rotate2 start transition" rotate-id="2" puzzle-id="5"></div>
+				<div class="puzzle-element shark6 rotate3 start transition" rotate-id="3" puzzle-id="6"></div>
+
+				<div class="puzzle-area shark1" area-id="1"></div>
+				<div class="puzzle-area shark2" area-id="2"></div>
+				<div class="puzzle-area shark3" area-id="3"></div>
+				<div class="puzzle-area shark4" area-id="4"></div>
+				<div class="puzzle-area shark5" area-id="5"></div>
+				<div class="puzzle-area shark6" area-id="6"></div>
+
+				<div class="space-info">
+					<div class="rotate">&#10558;</div>
+					<div class="space"><span>SPACE</span></div>
+				</div>
+
+				<div class="effect">
+					<div class="fish"></div>
+					<div class="bubbles bubble-1"></div>
+					<div class="bubbles bubble-5"></div>
+					<div class="bubbles bubble-2"></div>
+					<div class="bubbles bubble-6"></div>
+					<div class="bubbles bubble-3"></div>
+					<div class="bubbles bubble-7"></div>
+					<div class="bubbles bubble-4"></div>
+					<div class="bubbles bubble-8"></div>	
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<script>
+
+		var selectGame = document.querySelector('.select-game');
+
+	    if(selectGame) {
+	    	selectGame.addEventListener('click', function() {
+
+	    		if(!this.classList.contains('finish')) {
+		    		var gameSelect = this.parentElement;
+
+		    		var dataClass = this.getAttribute('data-class'),
+		    			selectedArea = document.querySelector('.' + dataClass),
+		    			area = document.querySelector('section.' + dataClass + ' .background');
+
+		    		if(area) {
+
+		    			gameSelect.classList.add('hide');
+		    			selectedArea.classList.remove('hide');
+		    			puzzleGame.puzzle(area, selectedArea);
+		    		}
+	    		}
+	    	}, false);
+	    }
+
+	</script>
+
+</body>
+</html>

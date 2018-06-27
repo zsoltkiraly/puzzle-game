@@ -1,0 +1,235 @@
+.background {
+	height: 100%;
+	z-index: 2;
+
+	@include full-block();
+
+	&.disabled:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+	}
+}
+
+a.back {
+	position: absolute;
+	top: 65px;
+	left: 65px;
+	font-family: 'Prstart';
+	z-index: 3;
+	font-size: 5em;
+	color: #fceb03;
+	text-shadow: 3px 3px rgba(0,0,0, 0.5);
+	text-decoration: none;
+
+	@include transition(text-shadow .3s ease);
+
+	&:hover {
+		text-shadow: 6px 6px rgba(0,0,0, 0.5);
+	}
+}
+
+.coin {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	width: 80px;
+	height: 80px;
+	background-image: url(../images/coin.png);
+	background-repeat: no-repeat;
+	z-index: 3;
+
+	@include background-size(cover);
+}
+
+.points {
+	position: absolute;
+	top: 65px;
+	right: 150px;
+	font-family: 'Prstart';
+	z-index: 3;
+	font-size: 4em;
+	color: #fceb03;
+	text-shadow: 3px 3px rgba(0,0,0, 0.5);
+}
+
+.puzzle-element {
+	position: absolute;
+    z-index: 3;
+
+	@include transition(transform .3s ease);
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 3;
+		background-repeat: no-repeat;
+
+		@include scale(1, 1);
+		@include transition(transform .3s ease);
+	}
+
+	&:hover { cursor: move; }
+
+	&.stars:before {
+		content: '';
+		position: absolute;
+		background-image: url(../images/star.gif);
+		background-repeat: no-repeat;
+		background-position: 50%, 50%;
+		z-index: 6;
+		width: 60px;
+		height: 76px;
+		top: 50%;
+		left: 50%;
+
+		@include opacity(.8);
+		@include background-size(contain);
+		@include translate(-50%, -50%);
+	}
+
+	&.catch {
+		z-index: 4;
+
+		&:after { @include scale(.9, .9); }
+	}
+
+	&.return {
+		@include transition-duration(.2s);
+		@include transition(top .2s ease-out, left .2s ease);
+	}
+
+	&.transition {
+		@include transition-duration(.5s);
+		@include transition(top .5s ease-out, left .5s ease-out);
+	}
+
+	&.active { cursor: default; z-index: 3; }
+
+	&.rotate1:after { @include multi-transform(rotate(0deg) scale(1, 1)); }
+	&.rotate2:after { @include multi-transform(rotate(90deg) scale(1, 1)); }
+	&.rotate3:after { @include multi-transform(rotate(180deg) scale(1, 1)); }
+	&.rotate4:after { @include multi-transform(rotate(270deg) scale(1, 1)); }
+	&.rotate5:after { @include multi-transform(rotate(360deg) scale(1, 1));	}
+
+	&.catch {
+		&.rotate1:after { @include multi-transform(rotate(0deg) scale(.9, .9)); @include transition(all 0s); }
+		&.rotate2:after { @include multi-transform(rotate(90deg) scale(.9, .9)); }
+		&.rotate3:after { @include multi-transform(rotate(180deg) scale(.9, .9)); }
+		&.rotate4:after { @include multi-transform(rotate(270deg) scale(.9, .9)); }
+		&.rotate5:after { @include multi-transform(rotate(360deg) scale(.9, .9)); }
+	}
+}
+
+.puzzle-area { position: absolute; z-index: 3; }
+
+.start-game {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 18%;
+	z-index: 4;
+
+	span {
+		position: relative;
+		display: inline-block;
+		letter-spacing: -20px;
+		text-shadow: 3px 3px rgba(0,0,0, 0.5);
+		cursor: pointer;
+		font-family: 'Prstart';
+		font-size: 6em;
+		color: #fceb03;
+
+		@include transition(text-shadow .3s ease);
+
+		&:hover { text-shadow: 6px 6px rgba(0,0,0, 0.5); }
+	}
+
+	&.bounceOut {
+		@include animation-name(bounceOutDown);
+		@include animation-duration(1s);
+		@include animation-fill-mode(forwards);
+	}
+
+	&.hide { display: none; }
+}
+
+@keyframes bounceOutDown {
+  20% {
+    @include translate(0, 10px);
+  }
+
+  40%, 45% {
+    @include opacity(1);
+    @include translate(0, -20px);
+  }
+
+  100% {
+    @include opacity(0);
+    @include translate(0, 2000px);
+  }
+}
+
+.back {
+	position: absolute;
+	top: 65px;
+	left: 65px;
+	letter-spacing: -20px;
+	text-shadow: 3px 3px rgba(0,0,0, 0.5);
+	cursor: pointer;
+	font-family: 'Prstart';
+	font-size: 6em;
+	color: #fceb03;
+	z-index: 3;
+
+	@include transition(text-shadow .3s ease);
+
+	&:hover { text-shadow: 6px 6px rgba(0,0,0, 0.5); }
+}
+
+
+.space-info {
+	position: absolute;
+	width: 200px;
+	height: auto;
+	bottom: 100px;
+	right: 65px;
+	z-index: 2;
+
+	.rotate {
+		letter-spacing: -20px;
+		text-shadow: 3px 3px rgba(0,0,0, 0.5);
+		font-family: 'Prstart';
+		font-size: 6em;
+		color: #fceb03;
+		position: relative;
+		display: block;
+		top: -30px;
+		left: -45px;
+
+		@include rotate(225deg);
+	}
+	.space {
+		position: relative;
+		display: block;
+		width: 200px;
+		height: 25px;
+		background-color: #fceb03;
+		text-align: center;
+		border-radius: 4px;
+		box-shadow: 3px 3px rgba(0,0,0, 0.5);
+
+		span {
+			font-family: 'Prstart';
+			font-size: 1em;
+			color: black;
+			position: relative;
+			display: inline-block;
+			top: 7px;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <title>puzzle game v1.0.1 by Zsolt Kiraly</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+
+	<div class="coin"></div>
+	<div class="points">0</div>
+
+	<div class="elephant">
+		<a class="back" href="./" title="Back">&#60;</a>
+		<div class="start-game"><span class="floating">Press Start</span></div>
+
+		<div class="background disabled">
+
+			<div class="elephant-negative"></div>
+
+			<div class="puzzle-element elephant1 rotate2 start transition" rotate-id="2" puzzle-id="1"></div>
+			<div class="puzzle-element elephant2 rotate3 start transition" rotate-id="3" puzzle-id="2"></div>
+			<div class="puzzle-element elephant3 rotate4 start transition" rotate-id="4" puzzle-id="3"></div>
+			<div class="puzzle-element elephant4 rotate3 start transition" rotate-id="3" puzzle-id="4"></div>
+			<div class="puzzle-element elephant5 rotate4 start transition" rotate-id="4" puzzle-id="5"></div>
+			<div class="puzzle-element elephant6 rotate2 start transition" rotate-id="2" puzzle-id="6"></div>
+			<div class="puzzle-element elephant7 rotate3 start transition" rotate-id="3" puzzle-id="7"></div>
+
+			<div class="puzzle-area elephant1" area-id="1"></div>
+			<div class="puzzle-area elephant2" area-id="2"></div>
+			<div class="puzzle-area elephant3" area-id="3"></div>
+			<div class="puzzle-area elephant4" area-id="4"></div>
+			<div class="puzzle-area elephant5" area-id="5"></div>
+			<div class="puzzle-area elephant6" area-id="6"></div>
+			<div class="puzzle-area elephant7" area-id="7"></div>
+
+		</div>
+
+
+		<div id="bird-content">
+			<div id="bird">
+				<div id="body2"></div>
+				<div id="body1"></div>
+				<div id="wing-l"></div>  
+				<div id="wing-r"></div>  
+			</div>
+			<div id="shadow"></div>
+		</div>
+
+
+	</div>
+
+</body>
+</html>
