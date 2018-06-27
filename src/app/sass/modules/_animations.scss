@@ -188,10 +188,10 @@
   margin-right: 50px;
   background-color: white;
   border-radius: 50%;
-  opacity: .50;
   width: 40px;
   height: 40px;
 
+  @include opacity(.5);
   @include animation(up 4s infinite);
 }
 
@@ -286,12 +286,13 @@
   }
 }
 
-
-#bird div {
+#bird {
   position: absolute;
-}
 
-#bird { position: absolute; @include animation(bob 0.7s infinite cubic-bezier(0.7, 0.7, 0.1, 0.4)); }
+  @include animation(bob 0.7s infinite cubic-bezier(0.7, 0.7, 0.1, 0.4));
+
+  div { position: absolute; }
+}
 
 #body1,
 #body2,
@@ -346,37 +347,19 @@
 }
 
 @keyframes up {
-  100% {
-    @include translateY(-2000px);
-  }
+  100% { @include translateY(-2000px); }
 }
 
-
 @keyframes flap-r {
-  0%,
-  10% {
-    border-top-width: 60px;
-  }
-  40%,
-  60% {
-    border-top-width: 10px;
-  }
-  100% {
-    border-top-width: 60px;
-  }
+  0%, 10% { border-top-width: 60px; }
+  40%, 60% { border-top-width: 10px; }
+  100% { border-top-width: 60px; }
 }
 
 @keyframes flap-l {
-  0% {
-    border-bottom-width: 0;
-  }
-  40%,
-  60% {
-    border-bottom-width: 40px;
-  }
-  100% {
-    border-bottom-width: 0;
-  }
+  0% { border-bottom-width: 0; }
+  40%, 60% { border-bottom-width: 40px; }
+  100% { border-bottom-width: 0; }
 }
 
 @keyframes fly {
@@ -395,13 +378,7 @@
 }
 
 @keyframes bob {
-  0% {
-    top: 25px;
-  }
-  50% {
-    top: 0;
-  }
-  100% {
-    top: 25px;
-  }
+  0% { top: 25px; }
+  50% { top: 0; }
+  100% { top: 25px; }
 }
