@@ -1,7 +1,20 @@
 # Puzzle game v1.0.4
 
 <br />
-<a href="http://zsoltkiraly.com/developments/puzzle-game/" target="_blank">DEMO PAGE</a>
+<a href="http://zsoltkiraly.com/developments/puzzle-game/" target="_blank">DEMO PAGE</a><br /><br />
+
+<img src="http://zsoltkiraly.com/developments/_images/puzzle-001.jpg"><br /><br />
+
+## GAME FUNCTIONS
+
+- Drag and drop pressing and holding a mouse button
+- Rotate space button
+- Score counter
+- Restart
+
+<br />
+
+<img src="http://zsoltkiraly.com/developments/_images/puzzle-002.jpg">
 
 #
 <br />
