@@ -8,11 +8,36 @@
 
 /* Modules
 ====================================*/
-@import 'modules/_fonts';
-@import 'modules/_animations';
-@import 'modules/_body';
-@import 'modules/_select';
-@import 'modules/_puzzle';
-@import 'modules/_bear';
-@import 'modules/_shark';
-@import 'modules/_elephant';
+@media only screen and (min-width: 1920px) {
+	@import 'modules/_fonts';
+	@import 'modules/_animations';
+	@import 'modules/_body';
+	@import 'modules/_select';
+	@import 'modules/_puzzle';
+	@import 'modules/_bear';
+	@import 'modules/_shark';
+	@import 'modules/_elephant';
+}
+
+@media only screen and (max-width: 1919px) {
+	html {
+		height: 100%;
+		width: 100%;
+
+		&:after {
+			content: 'Your screen resolution is not supported';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			@include translate(-50%, -50%);
+		}
+	}
+
+	body {
+		display: none;
+		visibility: hidden;
+
+		@include opacity(0);
+	}
+}
