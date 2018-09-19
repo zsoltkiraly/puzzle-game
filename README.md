@@ -1,9 +1,9 @@
 # Puzzle game v1.0.4
 
 <br />
-<a href="http://zsoltkiraly.com/developments/puzzle-game/" target="_blank">DEMO PAGE</a><br /><br />
+<a href="https://zsoltkiraly.com/developments/puzzle-game/" target="_blank">DEMO PAGE</a><br /><br />
 
-<img src="http://zsoltkiraly.com/developments/_images/puzzle-001.jpg"><br /><br />
+<img src="https://zsoltkiraly.com/developments/_images/puzzle-001.jpg"><br /><br />
 
 ## GAME FUNCTIONS
 
@@ -14,7 +14,7 @@
 
 <br />
 
-<img src="http://zsoltkiraly.com/developments/_images/puzzle-002.jpg">
+<img src="https://zsoltkiraly.com/developments/_images/puzzle-002.jpg">
 
 #
 <br />
